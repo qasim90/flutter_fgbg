@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -66,6 +65,11 @@ class FGBGEvents {
     } finally {
       _ignoreEvent = false;
     }
+  }
+
+  // Method to reset the singleton instance, useful for testing purposes.
+  static void reset() {
+    _instance = null;
   }
 }
 
